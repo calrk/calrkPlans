@@ -1,0 +1,22 @@
+{
+  "name": "calrkPlans",
+  "version": "0.0.0",
+  "description": "plan yo shit before you do yo shit!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Clark Lavery",
+  "license": "",
+  "devDependencies": {
+    "socket.io": "~0.9.16",
+    "mongoose": "~3.8.7",
+    "connect": "~2.13.0",
+    "underscore": "~1.6.0",
+    "nodemailer": "~0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calrk/calrkPlans.git"
+  }
+}

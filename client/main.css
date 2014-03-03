@@ -1,0 +1,209 @@
+html{
+	height: 100%;
+	font-family: 'Concert One', cursive;
+	background-image: -webkit-linear-gradient(top, rgb(78,69,59) 0%, rgb(165,140,113) 100%);
+}
+body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.title{
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255, 0.5) 0%, rgba(255,255,255, 0.5) 100%);
+	/*background-color: white;*/
+	cursor: pointer;
+	/*border: 2px solid black;*/
+	font-size: 2rem;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.title:hover{
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255, 0.5) 0%, rgba(255,255,255, 0.75) 100%);
+}
+.title:first-letter{
+	font-size: 125%;
+}
+.activetitle{
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255, 0.5) 0%, rgba(255,255,255, 0.75) 50%, rgba(255,255,255, 0.5) 100%);
+}
+
+.login{
+	width: 500px;
+	float: center;
+	margin: 30px auto;
+	overflow: hidden;
+	/*border: 2px solid black;*/
+}
+.loginmenu{
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255, 0.5) 0%, rgba(255,255,255, 0) 300px);
+	/*background-color: transparent;*/
+	height: 400px;
+	overflow: hidden;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+input{
+	font-family: 'Concert One', cursive;
+	color: white;
+	background-color: rgba(255,255,255,0.35);
+	border: 0;
+	height: 50px;
+	margin: 10px;
+	margin-bottom: 5px;
+	padding: 10px;
+	font-size: 1.5rem;
+	width: 480px;
+	padding-left: 50px;
+}
+input:hover{
+	background-color: rgba(255,255,255,0.55);
+}
+input:focus{
+	background-color: rgba(255,255,255,0.75);
+	color: black;
+}
+input::-webkit-input-placeholder{
+	color: white;
+}
+input.user{
+	background-image: url(img/user.png);
+	background-size: auto 25px;
+	background-repeat: no-repeat;
+	background-position: 10px 15px;
+}
+input.password{
+	background-image: url(img/lock.png);
+	background-size: auto 25px;
+	background-repeat: no-repeat;
+	background-position: 12px 15px;
+}
+.errorDiv{
+	color: black;
+	font-size: 1.5rem;
+	height: 30px;
+	margin: 10px;
+	padding: 10px;
+	background-color: rgba(255,0,0,0.5);
+	overflow: hidden;
+}
+.successDiv{
+	color: black;
+	font-size: 1.5rem;
+	height: 30px;
+	margin: 10px;
+	padding: 10px;
+	background-color: rgba(0,255,0,0.5);
+	overflow: hidden;
+}
+
+.closed{
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+
+/*map stuff*/
+
+#map-canvas{
+	height: 100%;
+	width: 80%;
+	float: left;
+	background-color: white;
+}
+
+#menu{ 
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+.menuItem{
+	margin: 0px;
+}
+div.subMenuItem{
+	margin: 10px;
+	color: white;
+}
+input.subMenuItem{
+	width: 100%;
+	margin: 0px;
+	padding-left: 0px;
+}
+.mapListImage{
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-right: 10px;
+}
+.mapListItem{
+	background-color: rgba(255,255,255,0.35);
+	width: 100%;
+	padding: 10px;
+	cursor: pointer;
+}
+li{
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255, 0.5) 0%, rgba(255,255,255, 0) 300px);
+	transition: all 1s;
+	-webkit-transition: all 1s;
+}
+ul{
+	list-style: none;
+	-webkit-padding-start: 0px;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+}
+
+div.mapListImage{
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-right: 10px;
+	padding-right: 0px;
+	background-image: url('img/link.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+.linked{
+	background-image: url('img/brokenLink.png') !important;
+}
+.linking{
+	/*background-color: rgba(255,255,255,0.75);*/
+	-webkit-animation-name:             rotate; 
+	-webkit-animation-duration:         0.5s; 
+	-webkit-animation-iteration-count:  infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to { 
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+#newMarkerDiv, #newMapDiv, #shareMapDiv{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 400px;
+	background-image: -webkit-linear-gradient(top, rgb(78,69,59) 0%, rgb(165,140,113) 100%);
+	/*background-color: black;*/
+}
+#newMarkerDiv input, #newMapDiv input, #shareMapDiv input{
+	padding-left: 10px;
+}
+.newMarkerImage{
+	background-color: rgba(255,255,255,0.35);
+	margin: 10px;
+	padding: 6px;
+	margin-bottom: 5px;
+}
+.iconSelected{
+	width: 40px;
+	height: 46px;
+}
