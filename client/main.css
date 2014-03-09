@@ -2,6 +2,7 @@ html{
 	height: 100%;
 	font-family: 'Concert One', cursive;
 	background-image: -webkit-linear-gradient(top, rgb(78,69,59) 0%, rgb(165,140,113) 100%);
+	background-color: gray;
 }
 body{
 	height: 100%;
@@ -119,6 +120,14 @@ input.password{
 	height: 100%;
 	width: 20%;
 	float: left;
+}
+#pins{ 
+	height: 100%;
+	width: 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: white;
 }
 .menuItem{
 	margin: 0px;

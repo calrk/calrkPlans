@@ -1,4 +1,4 @@
-<html>
+<html ng-app>
 <head>
 	<title>calrkPlans</title>
 	
@@ -9,6 +9,7 @@
 	<script type="text/javascript"
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQJJlVbjykuRZpc7qTV9Dvh7rENgzMdEQ&sensor=false">
 	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
 	<script type="text/javascript" src="resources/socket.io.min.js"></script>
 	<script type="text/javascript" src="resources/md5.js"></script>
 	<script type="text/javascript" src="resources/mustache.js"></script>
@@ -18,6 +19,7 @@
 	<script type="text/javascript" src="account.js"></script>
 	<script type="text/javascript" src="templates.js"></script>
 	<script type="text/javascript" src="marker.js"></script>
+	<script type="text/javascript" src="prims.js"></script>
 </head>
 <body>
 	<div id="loginDiv" class="login" style="display:block;">
@@ -70,6 +72,9 @@
 			</ul>
 		</div>
 		<div id="map-canvas"></div>
+		<!-- <div id="pins">
+			<img id="icon1" src="img/person.png" draggable="true"/>
+		</div> -->
 	</div>
 
 	<div id="newMarkerDiv" class="closed">
@@ -91,6 +96,24 @@
 			<input type="reset" value="cancel" onclick="toggleMenu();"/>
 		</form>
 	</div>
+
+	<!-- <div id="editMarkerDiv" class="closed" ng-controller="editMarker">
+			<input id="editMarkerName" type="text" Value="{{name}}"/>
+			<input type="text" placeholder="Address" onchange="geocode(this);"/>
+			<input id="markerLat" type="text" placeholder="Latitude"/>
+			<input id="markerLng" type="text" placeholder="Longitude"/>
+			<div class="newMarkerImage">
+				<img id="icon1" onclick="chooseIcon('person');" src="img/person.png" class="iconSelected"/>
+				<img id="icon2" onclick="chooseIcon('car');" src="img/car.png"/>
+				<img id="icon3" onclick="chooseIcon('meet');" src="img/meet.png"/>
+				<img id="icon4" onclick="chooseIcon('office');" src="img/office.png"/>
+				<img id="icon5" onclick="chooseIcon('target');" src="img/target.png"/>
+				<img id="icon6" onclick="chooseIcon('train');" src="img/train.png"/>
+				<input id="iconType" type="text" style="display:none;" value="person">
+			</div>
+			<input value="create" onclick="createMarker();"/>
+			<input value="cancel" onclick="toggleMenu();"/>
+	</div> -->
 
 	<div id="newMapDiv" class="closed">
 		<form>

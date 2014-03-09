@@ -10,7 +10,12 @@ var mapToEdit;
 var mapToShare;
 
 function initialiseSocket(){
-	socket = io.connect('http://localhost');
+	if(document.URL.match('localhost')){
+		socket = io.connect('http://localhost');
+	}
+	else{
+		socket = io.connect('http://14.201.77.58');
+	}
 
 	socket.on('connected', function(){
 
@@ -71,6 +76,11 @@ function openMap(args){
 
 	google.maps.event.addListener(gmap, 'click', function(event) {
 		updateLatLng(event.latLng.lat(), event.latLng.lng());
+	});
+
+	google.maps.event.addListener(gmap, 'draganddrop', function(event) {
+		// updateLatLng(event.latLng.lat(), event.latLng.lng());
+		console.log("asd")
 	});
 }
 
@@ -163,3 +173,12 @@ function geocode(element){
 
 window.onload = initialiseSocket;
 // google.maps.event.addDomListener(window, 'load', initialiseMap);
+
+/*Array.prototype.contains = function(value){
+	for(var i = 0; i < this.length; i++){
+		if(this[i] == value){
+			return true;
+		}
+	}
+	return false;
+}*/

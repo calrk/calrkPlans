@@ -7,12 +7,12 @@ var User = require('./Models/User.js');
 var Map = require('./Models/Map.js');
 var Marker = require('./Models/Marker.js');
 var nodemailer = require('nodemailer');
-var transport = nodemailer.createTransport("SMTP",{
+/*var transport = nodemailer.createTransport("SMTP",{
 	service: "Gmail",
 	auth: {
 		user: "calrk1@gmail.com",
 	}
-}); 
+}); */
 
 var Application = {
 	initialise: function() {
@@ -148,7 +148,7 @@ var Application = {
 						var user = new User({email: args.email, maps:[args.map._id]});
 						user.save();
 						var mail = {
-							from: "calrk1@gmail.com",
+							from: "mpatton86@live.com",
 							to: args.email,
 							subject: "A map has been shared with you!",
 							text: "Some totally cool dude has shared a map with you. Go to http://14.201.77.58 and register an account in order to see and edit it."

@@ -12,6 +12,7 @@ var markerTemplate = "\
 <div id=\"{{_id}}\" class='subMenuItem'>\
 	<div class='mapListItem'> \
 		<span onclick=\"clickMarker(\'{{_id}}\')\">{{title}}</span>\
+		<img class='mapListImage' src='img/prims.png' onclick=\"doPrims(\'{{_id}}\');\"/>\
 		<div class='mapListImage {{#link}}linked{{/link}}' onclick=\"linkMarker(\'{{_id}}\', this);\"></div>\
 		<img class='mapListImage' src='img/delete.png' onclick=\"deleteMarker(\'{{_id}}\');\"/>\
 	</div>\
